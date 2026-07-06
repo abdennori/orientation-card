@@ -8,22 +8,28 @@
     @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@400;500;700&display=swap');
 
     /* ── Reset & Base ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
-      --navy:   #1A2B5E;
-      --teal:   #0A8F8F;
-      --gold:   #E8A020;
-      --mint:   #02C39A;
-      --white:  #FFFFFF;
+      --navy: #1A2B5E;
+      --teal: #0A8F8F;
+      --gold: #E8A020;
+      --mint: #02C39A;
+      --white: #FFFFFF;
       --offwht: #F4F8FB;
-      --muted:  #94A3B8;
-      --dark:   #1E293B;
-      --card:   #FFFFFF;
+      --muted: #94A3B8;
+      --dark: #1E293B;
+      --card: #FFFFFF;
       --radius: 16px;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'Cairo', sans-serif;
@@ -41,37 +47,26 @@
       position: relative;
       overflow: hidden;
     }
-    .hero-logo{
-    display:flex;
-    justify-content:center;
-    margin-bottom:20px;
-}
-
-.hero-logo img{
-    width:130px;
-    height:130px;
-    border-radius:50%;
-    background:#fff;
-    padding:8px;
-    box-shadow:0 6px 20px rgba(0,0,0,.25);
-    object-fit:contain;
-}
     .hero::before {
       content: '';
       position: absolute;
-      top: -80px; left: -80px;
-      width: 320px; height: 320px;
+      top: -80px;
+      left: -80px;
+      width: 320px;
+      height: 320px;
       border-radius: 50%;
-      background: rgba(10,143,143,0.18);
+      background: rgba(10, 143, 143, 0.18);
       pointer-events: none;
     }
     .hero::after {
       content: '';
       position: absolute;
-      bottom: -60px; right: -60px;
-      width: 240px; height: 240px;
+      bottom: -60px;
+      right: -60px;
+      width: 240px;
+      height: 240px;
       border-radius: 50%;
-      background: rgba(232,160,32,0.14);
+      background: rgba(232, 160, 32, 0.14);
       pointer-events: none;
     }
 
@@ -79,8 +74,8 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(2,195,154,0.15);
-      border: 1px solid rgba(2,195,154,0.35);
+      background: rgba(2, 195, 154, 0.15);
+      border: 1px solid rgba(2, 195, 154, 0.35);
       color: var(--mint);
       font-size: 12px;
       font-weight: 600;
@@ -89,7 +84,9 @@
       margin-bottom: 20px;
       letter-spacing: 0.5px;
     }
-    .hero-badge span { font-size: 14px; }
+    .hero-badge span {
+      font-size: 14px;
+    }
 
     .hero h1 {
       font-size: clamp(28px, 7vw, 48px);
@@ -106,7 +103,7 @@
     .hero-sub {
       font-family: 'Tajawal', sans-serif;
       font-size: 15px;
-      color: rgba(255,255,255,0.65);
+      color: rgba(255, 255, 255, 0.65);
       margin-bottom: 28px;
     }
 
@@ -124,9 +121,21 @@
       font-weight: 700;
       border: 1.5px solid;
     }
-    .pill-green  { background: rgba(46,125,50,0.25); border-color: #4caf50; color: #a5d6a7; }
-    .pill-blue   { background: rgba(21,101,192,0.25); border-color: #42a5f5; color: #90caf9; }
-    .pill-purple { background: rgba(106,27,154,0.25); border-color: #ab47bc; color: #ce93d8; }
+    .pill-green {
+      background: rgba(46, 125, 50, 0.25);
+      border-color: #4caf50;
+      color: #a5d6a7;
+    }
+    .pill-blue {
+      background: rgba(21, 101, 192, 0.25);
+      border-color: #42a5f5;
+      color: #90caf9;
+    }
+    .pill-purple {
+      background: rgba(106, 27, 154, 0.25);
+      border-color: #ab47bc;
+      color: #ce93d8;
+    }
 
     /* ── Sections container ── */
     .sections {
@@ -142,7 +151,7 @@
     .card {
       background: var(--card);
       border-radius: var(--radius);
-      box-shadow: 0 2px 16px rgba(26,43,94,0.07);
+      box-shadow: 0 2px 16px rgba(26, 43, 94, 0.07);
       overflow: hidden;
       transform: translateY(24px);
       opacity: 0;
@@ -162,20 +171,38 @@
       cursor: pointer;
       user-select: none;
     }
-    .card-header:hover { background: #fafcff; }
+    .card-header:hover {
+      background: #fafcff;
+    }
 
     .card-icon {
-      width: 42px; height: 42px;
+      width: 42px;
+      height: 42px;
       border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 20px;
       flex-shrink: 0;
     }
-    .icon-teal   { background: rgba(10,143,143,0.12); }
-    .icon-gold   { background: rgba(232,160,32,0.12); }
-    .icon-navy   { background: rgba(26,43,94,0.1); }
-    .icon-mint   { background: rgba(2,195,154,0.12); }
-    .icon-red    { background: rgba(239,68,68,0.1); }
+    .icon-teal {
+      background: rgba(10, 143, 143, 0.12);
+    }
+    .icon-gold {
+      background: rgba(232, 160, 32, 0.12);
+    }
+    .icon-navy {
+      background: rgba(26, 43, 94, 0.1);
+    }
+    .icon-mint {
+      background: rgba(2, 195, 154, 0.12);
+    }
+    .icon-red {
+      background: rgba(239, 68, 68, 0.1);
+    }
+    .icon-orange {
+      background: rgba(255, 152, 0, 0.12);
+    }
 
     .card-title {
       flex: 1;
@@ -188,19 +215,27 @@
       font-size: 13px;
       transition: transform 0.3s;
     }
-    .card.open .card-chevron { transform: rotate(180deg); }
+    .card.open .card-chevron {
+      transform: rotate(180deg);
+    }
 
     .card-body {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.4s ease;
     }
-    .card.open .card-body { max-height: 1000px; }
+    .card.open .card-body {
+      max-height: 2000px;
+    }
 
-    .card-inner { padding: 4px 20px 20px; }
+    .card-inner {
+      padding: 4px 20px 20px;
+    }
 
     /* ── Program ── */
-    .day-block { margin-bottom: 20px; }
+    .day-block {
+      margin-bottom: 20px;
+    }
     .day-label {
       display: flex;
       align-items: center;
@@ -211,11 +246,24 @@
       border-radius: 8px;
       margin-bottom: 10px;
     }
-    .day-label.green  { background: #e8f5e9; color: #2e7d32; }
-    .day-label.blue   { background: #e3f2fd; color: #1565c0; }
-    .day-label.purple { background: #f3e5f5; color: #6a1b9a; }
+    .day-label.green {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+    .day-label.blue {
+      background: #e3f2fd;
+      color: #1565c0;
+    }
+    .day-label.purple {
+      background: #f3e5f5;
+      color: #6a1b9a;
+    }
 
-    .activity-list { display: flex; flex-direction: column; gap: 8px; }
+    .activity-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
     .activity-item {
       display: flex;
       align-items: flex-start;
@@ -225,17 +273,32 @@
       border-radius: 10px;
     }
     .activity-dot {
-      width: 8px; height: 8px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       margin-top: 6px;
       flex-shrink: 0;
     }
-    .dot-green  { background: #4caf50; }
-    .dot-blue   { background: #42a5f5; }
-    .dot-purple { background: #ab47bc; }
+    .dot-green {
+      background: #4caf50;
+    }
+    .dot-blue {
+      background: #42a5f5;
+    }
+    .dot-purple {
+      background: #ab47bc;
+    }
 
-    .activity-text { font-size: 14px; line-height: 1.5; color: var(--dark); }
-    .activity-sub  { font-size: 12px; color: var(--muted); margin-top: 1px; }
+    .activity-text {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--dark);
+    }
+    .activity-sub {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 1px;
+    }
 
     /* ── Map ── */
     .corners-grid {
@@ -253,23 +316,76 @@
       border: 1.5px solid;
       transition: transform 0.2s;
     }
-    .corner-card:hover { transform: scale(1.02); }
-    .corner-emoji { font-size: 22px; }
-    .corner-name { font-size: 13px; font-weight: 600; line-height: 1.3; }
+    .corner-card:hover {
+      transform: scale(1.02);
+    }
+    .corner-emoji {
+      font-size: 22px;
+    }
+    .corner-name {
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
 
-    .c-red    { background: #ffebee; border-color: #ef9a9a; color: #b71c1c; }
-    .c-blue   { background: #e3f2fd; border-color: #90caf9; color: #0d47a1; }
-    .c-yellow { background: #fffde7; border-color: #fff176; color: #f57f17; }
-    .c-purple { background: #f3e5f5; border-color: #ce93d8; color: #4a148c; }
-    .c-orange { background: #fff3e0; border-color: #ffcc80; color: #bf360c; }
-    .c-cyan   { background: #e0f7fa; border-color: #80deea; color: #006064; }
-    .c-green  { background: #e8f5e9; border-color: #a5d6a7; color: #1b5e20; }
-    .c-teal   { background: #e0f2f1; border-color: #80cbc4; color: #004d40; }
-    .c-pink   { background: #fce4ec; border-color: #f48fb1; color: #880e4f; }
-    .c-brown  { background: #efebe9; border-color: #bcaaa4; color: #3e2723; }
+    .c-red {
+      background: #ffebee;
+      border-color: #ef9a9a;
+      color: #b71c1c;
+    }
+    .c-blue {
+      background: #e3f2fd;
+      border-color: #90caf9;
+      color: #0d47a1;
+    }
+    .c-yellow {
+      background: #fffde7;
+      border-color: #fff176;
+      color: #f57f17;
+    }
+    .c-purple {
+      background: #f3e5f5;
+      border-color: #ce93d8;
+      color: #4a148c;
+    }
+    .c-orange {
+      background: #fff3e0;
+      border-color: #ffcc80;
+      color: #bf360c;
+    }
+    .c-cyan {
+      background: #e0f7fa;
+      border-color: #80deea;
+      color: #006064;
+    }
+    .c-green {
+      background: #e8f5e9;
+      border-color: #a5d6a7;
+      color: #1b5e20;
+    }
+    .c-teal {
+      background: #e0f2f1;
+      border-color: #80cbc4;
+      color: #004d40;
+    }
+    .c-pink {
+      background: #fce4ec;
+      border-color: #f48fb1;
+      color: #880e4f;
+    }
+    .c-brown {
+      background: #efebe9;
+      border-color: #bcaaa4;
+      color: #3e2723;
+    }
 
     /* ── Contact ── */
-    .contact-list { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 4px;
+    }
     .contact-item {
       display: flex;
       align-items: center;
@@ -279,15 +395,25 @@
       border-radius: 12px;
     }
     .contact-avatar {
-      width: 40px; height: 40px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       background: var(--navy);
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 18px;
       flex-shrink: 0;
     }
-    .contact-name { font-size: 14px; font-weight: 700; color: var(--navy); }
-    .contact-role { font-size: 12px; color: var(--muted); }
+    .contact-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .contact-role {
+      font-size: 12px;
+      color: var(--muted);
+    }
     .contact-number {
       margin-top: 4px;
       display: inline-flex;
@@ -304,7 +430,12 @@
     }
 
     /* ── Links ── */
-    .links-list { display: flex; flex-direction: column; gap: 10px; margin-top: 4px; }
+    .links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 4px;
+    }
     .link-item {
       display: flex;
       align-items: center;
@@ -316,17 +447,34 @@
       color: var(--dark);
       transition: background 0.2s, transform 0.2s;
     }
-    .link-item:hover { background: #e8f0fe; transform: translateX(-4px); }
+    .link-item:hover {
+      background: #e8f0fe;
+      transform: translateX(-4px);
+    }
     .link-icon {
-      width: 38px; height: 38px;
+      width: 38px;
+      height: 38px;
       border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       font-size: 18px;
       flex-shrink: 0;
     }
-    .link-text-main { font-size: 14px; font-weight: 700; }
-    .link-text-sub  { font-size: 12px; color: var(--muted); }
-    .link-arrow { margin-right: auto; color: var(--muted); font-size: 14px; margin-left: 0; }
+    .link-text-main {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .link-text-sub {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .link-arrow {
+      margin-right: auto;
+      color: var(--muted);
+      font-size: 14px;
+      margin-left: 0;
+    }
 
     /* ── Digital ideas teaser ── */
     .digital-grid {
@@ -341,18 +489,194 @@
       padding: 14px;
       text-align: center;
     }
-    .digital-item .di-icon { font-size: 26px; margin-bottom: 6px; }
-    .digital-item .di-label { font-size: 12px; font-weight: 700; color: var(--navy); line-height: 1.4; }
+    .digital-item .di-icon {
+      font-size: 26px;
+      margin-bottom: 6px;
+    }
+    .digital-item .di-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.4;
+    }
+
+    /* ── Registration Form ── */
+    .reg-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .reg-form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .reg-form-group {
+      flex: 1 1 160px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .reg-form-group label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+    .reg-form-group input,
+    .reg-form-group select {
+      padding: 10px 12px;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 14px;
+      background: var(--offwht);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .reg-form-group input:focus,
+    .reg-form-group select:focus {
+      outline: none;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(10, 143, 143, 0.15);
+    }
+    .reg-form-group input::placeholder {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .reg-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-top: 4px;
+    }
+    .btn {
+      padding: 10px 24px;
+      border: none;
+      border-radius: 100px;
+      font-family: 'Cairo', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn:hover {
+      transform: scale(1.02);
+    }
+    .btn-primary {
+      background: var(--teal);
+      color: white;
+      box-shadow: 0 4px 12px rgba(10, 143, 143, 0.3);
+    }
+    .btn-primary:hover {
+      box-shadow: 0 6px 18px rgba(10, 143, 143, 0.4);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--muted);
+      color: var(--muted);
+    }
+    .btn-outline:hover {
+      border-color: var(--navy);
+      color: var(--navy);
+      background: #f0f4f8;
+    }
+    .btn-danger {
+      background: #ef4444;
+      color: white;
+      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.25);
+    }
+    .btn-danger:hover {
+      box-shadow: 0 6px 18px rgba(239, 68, 68, 0.35);
+    }
+    .btn-success {
+      background: #22c55e;
+      color: white;
+      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+    }
+    .btn-success:hover {
+      box-shadow: 0 6px 18px rgba(34, 197, 94, 0.4);
+    }
+    .reg-stats {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--dark);
+      background: var(--offwht);
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-right: auto;
+    }
+    .reg-stats strong {
+      font-size: 18px;
+      color: var(--navy);
+    }
+
+    /* ── Attendee table ── */
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 16px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+    }
+    .attendee-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      min-width: 480px;
+    }
+    .attendee-table th {
+      background: var(--navy);
+      color: white;
+      padding: 10px 12px;
+      text-align: right;
+      font-weight: 700;
+    }
+    .attendee-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: middle;
+    }
+    .attendee-table tr:last-child td {
+      border-bottom: none;
+    }
+    .attendee-table tr:hover td {
+      background: #f8fafc;
+    }
+    .attendee-table .delete-btn {
+      background: none;
+      border: none;
+      color: #ef4444;
+      font-size: 18px;
+      cursor: pointer;
+      padding: 0 4px;
+      transition: transform 0.2s;
+    }
+    .attendee-table .delete-btn:hover {
+      transform: scale(1.2);
+    }
+    .empty-msg {
+      text-align: center;
+      padding: 24px 12px;
+      color: var(--muted);
+      font-size: 14px;
+    }
 
     /* ── Footer ── */
     footer {
       text-align: center;
       padding: 28px 20px;
       background: var(--navy);
-      color: rgba(255,255,255,0.45);
+      color: rgba(255, 255, 255, 0.45);
       font-size: 12px;
     }
-    footer strong { color: rgba(255,255,255,0.75); }
+    footer strong {
+      color: rgba(255, 255, 255, 0.75);
+    }
 
     /* ── Scroll indicator ── */
     .scroll-hint {
@@ -364,367 +688,647 @@
       animation: bounce 2s infinite;
     }
     @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(4px); }
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(4px);
+      }
     }
 
     @media (max-width: 400px) {
-      .corners-grid, .digital-grid { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 26px; }
+      .corners-grid,
+      .digital-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 26px;
+      }
+      .reg-form-row {
+        flex-direction: column;
+      }
+      .reg-form-group {
+        flex: 1 1 auto;
+      }
+      .reg-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .reg-stats {
+        margin-right: 0;
+        justify-content: center;
+      }
     }
   </style>
 </head>
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-logo">
-    <img src="logo.jpg" alt="ONJPA Logo">
-</div>
-  <div class="hero-badge"><span>🎓</span> يوم التوجيه الجامعي</div>
-  <h1>اختر تخصصك<br><em>بذكاء</em></h1>
-  <p class="hero-sub">Choisissez votre spécialité avec intelligence</p>
-  <div class="day-pills">
-    <span class="pill pill-green">🟢 اليوم الأول — الإلهام</span>
-    <span class="pill pill-blue">🔵 اليوم الثاني — Village</span>
-    <span class="pill pill-purple">🟣 اليوم الثالث — القرار</span>
-  </div>
-</div>
-
-<!-- SECTIONS -->
-<div class="sections">
-  <p class="scroll-hint">▾ اضغط على أي بطاقة لعرض التفاصيل</p>
-
-  <!-- 1. PROGRAM -->
-  <div class="card" data-card>
-    <div class="card-header" onclick="toggle(this)">
-      <div class="card-icon icon-teal">📅</div>
-      <div class="card-title">البرنامج الكامل</div>
-      <div class="card-chevron">▼</div>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge"><span>🎓</span> يوم التوجيه الجامعي</div>
+    <h1>اختر تخصصك<br><em>بذكاء</em></h1>
+    <p class="hero-sub">Choisissez votre spécialité avec intelligence</p>
+    <div class="day-pills">
+      <span class="pill pill-green">🟢 اليوم الأول — الإلهام</span>
+      <span class="pill pill-blue">🔵 اليوم الثاني — Village</span>
+      <span class="pill pill-purple">🟣 اليوم الثالث — القرار</span>
     </div>
-    <div class="card-body">
-      <div class="card-inner">
+  </div>
 
-        <div class="day-block">
-          <div class="day-label green">🟢 اليوم الأول — الإلهام والتوجيه</div>
-          <div class="activity-list">
-            <div class="activity-item">
-              <div class="activity-dot dot-green"></div>
-              <div>
-                <div class="activity-text">📲 استقبال وتسجيل إلكتروني</div>
-                <div class="activity-sub">بطاقة QR Code لكل مشارك</div>
-              </div>
-            </div>
-            <div class="activity-item">
-              <div class="activity-dot dot-green"></div>
-              <div>
-                <div class="activity-text">🎙️ افتتاح رسمي</div>
-                <div class="activity-sub">كلمة رئيس المكتب الولائي وكلمة الشركاء</div>
-              </div>
-            </div>
-            <div class="activity-item">
-              <div class="activity-dot dot-green"></div>
-              <div>
-                <div class="activity-text">🎓 محاضرة رئيسية</div>
-                <div class="activity-sub">«كيف تختار تخصصك الجامعي بذكاء؟»</div>
-              </div>
-            </div>
-            <div class="activity-item">
-              <div class="activity-dot dot-green"></div>
-              <div>
-                <div class="activity-text">🎬 عرض فيديو قصير</div>
-                <div class="activity-sub">جامعة المغير والتخصصات المتاحة</div>
-              </div>
-            </div>
-            <div class="activity-item">
-              <div class="activity-dot dot-green"></div>
-              <div>
-                <div class="activity-text">❓ جلسة أسئلة مباشرة</div>
-                <div class="activity-sub">تفاعل مباشر مع المختصين</div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- SECTIONS -->
+  <div class="sections">
+    <p class="scroll-hint">▾ اضغط على أي بطاقة لعرض التفاصيل</p>
 
-        <div class="day-block">
-          <div class="day-label blue">🔵 اليوم الثاني — Village d'Orientation</div>
-          <div class="activity-list">
-            <div class="activity-item">
-              <div class="activity-dot dot-blue"></div>
-              <div>
-                <div class="activity-text">🏛️ جولة حرة بين الأركان العلمية</div>
-                <div class="activity-sub">10 أركان تفاعلية — كل ركن يؤطره أستاذ أو طالب متفوق</div>
-              </div>
-            </div>
-            <div class="activity-item">
-              <div class="activity-dot dot-blue"></div>
-              <div>
-                <div class="activity-text">🤖 ركن الذكاء الاصطناعي</div>
-                <div class="activity-sub">«اسأل الذكاء الاصطناعي عن تخصصك»</div>
-              </div>
-            </div>
-            <div class="activity-item">
-              <div class="activity-dot dot-blue"></div>
-              <div>
-                <div class="activity-text">📊 استطلاع مباشر على الشاشة</div>
-                <div class="activity-sub">شارك برأيك وشاهد النتائج فورًا</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="day-block" style="margin-bottom:0">
-          <div class="day-label purple">🟣 اليوم الثالث — القرار والانطلاق</div>
-          <div class="activity-list">
-            <div class="activity-item">
-              <div class="activity-dot dot-purple"></div>
-              <div class="activity-text">🗣️ جلسة «اسأل ما تشاء» + شهادات الطلبة</div>
-            </div>
-            <div class="activity-item">
-              <div class="activity-dot dot-purple"></div>
-              <div class="activity-text">🏅 توزيع شهادات الشكر والتكريم</div>
-            </div>
-            <div class="activity-item">
-              <div class="activity-dot dot-purple"></div>
-              <div class="activity-text">📸 الصورة الجماعية والاختتام الرسمي</div>
-            </div>
-          </div>
-        </div>
-
+    <!-- 1. PROGRAM -->
+    <div class="card" data-card>
+      <div class="card-header" onclick="toggle(this)">
+        <div class="card-icon icon-teal">📅</div>
+        <div class="card-title">البرنامج الكامل</div>
+        <div class="card-chevron">▼</div>
       </div>
-    </div>
-  </div>
+      <div class="card-body">
+        <div class="card-inner">
 
-  <!-- 2. MAP -->
-  <div class="card" data-card>
-    <div class="card-header" onclick="toggle(this)">
-      <div class="card-icon icon-gold">🗺️</div>
-      <div class="card-title">خريطة الأركان</div>
-      <div class="card-chevron">▼</div>
-    </div>
-    <div class="card-body">
-      <div class="card-inner">
-        <p style="font-size:13px;color:var(--muted);margin-bottom:12px">اليوم الثاني — تنقّل بحرية بين الأركان</p>
-        <div class="corners-grid">
-          <div class="corner-card c-red">
-            <span class="corner-emoji">🩺</span>
-            <span class="corner-name">العلوم الطبية</span>
+          <div class="day-block">
+            <div class="day-label green">🟢 اليوم الأول — الإلهام والتوجيه</div>
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-dot dot-green"></div>
+                <div>
+                  <div class="activity-text">📲 استقبال وتسجيل إلكتروني</div>
+                  <div class="activity-sub">بطاقة QR Code لكل مشارك</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot dot-green"></div>
+                <div>
+                  <div class="activity-text">🎙️ افتتاح رسمي</div>
+                  <div class="activity-sub">كلمة رئيس المكتب الولائي وكلمة الشركاء</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot dot-green"></div>
+                <div>
+                  <div class="activity-text">🎓 محاضرة رئيسية</div>
+                  <div class="activity-sub">«كيف تختار تخصصك الجامعي بذكاء؟»</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot dot-green"></div>
+                <div>
+                  <div class="activity-text">🎬 عرض فيديو قصير</div>
+                  <div class="activity-sub">جامعة المغير والتخصصات المتاحة</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot dot-green"></div>
+                <div>
+                  <div class="activity-text">❓ جلسة أسئلة مباشرة</div>
+                  <div class="activity-sub">تفاعل مباشر مع المختصين</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="corner-card c-blue">
-            <span class="corner-emoji">⚙️</span>
-            <span class="corner-name">الهندسة والتكنولوجيا</span>
+
+          <div class="day-block">
+            <div class="day-label blue">🔵 اليوم الثاني — Village d'Orientation</div>
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-dot dot-blue"></div>
+                <div>
+                  <div class="activity-text">🏛️ جولة حرة بين الأركان العلمية</div>
+                  <div class="activity-sub">10 أركان تفاعلية — كل ركن يؤطره أستاذ أو طالب متفوق</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot dot-blue"></div>
+                <div>
+                  <div class="activity-text">🤖 ركن الذكاء الاصطناعي</div>
+                  <div class="activity-sub">«اسأل الذكاء الاصطناعي عن تخصصك»</div>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot dot-blue"></div>
+                <div>
+                  <div class="activity-text">📊 استطلاع مباشر على الشاشة</div>
+                  <div class="activity-sub">شارك برأيك وشاهد النتائج فورًا</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="corner-card c-yellow">
-            <span class="corner-emoji">📊</span>
-            <span class="corner-name">العلوم الاقتصادية</span>
+
+          <div class="day-block" style="margin-bottom:0">
+            <div class="day-label purple">🟣 اليوم الثالث — القرار والانطلاق</div>
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="activity-dot dot-purple"></div>
+                <div class="activity-text">🗣️ جلسة «اسأل ما تشاء» + شهادات الطلبة</div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot dot-purple"></div>
+                <div class="activity-text">🏅 توزيع شهادات الشكر والتكريم</div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-dot dot-purple"></div>
+                <div class="activity-text">📸 الصورة الجماعية والاختتام الرسمي</div>
+              </div>
+            </div>
           </div>
-          <div class="corner-card c-purple">
-            <span class="corner-emoji">⚖️</span>
-            <span class="corner-name">الحقوق والعلوم السياسية</span>
-          </div>
-          <div class="corner-card c-orange">
-            <span class="corner-emoji">📚</span>
-            <span class="corner-name">الآداب واللغات</span>
-          </div>
-          <div class="corner-card c-cyan">
-            <span class="corner-emoji">🏛️</span>
-            <span class="corner-name">المدارس العليا الوطنية</span>
-          </div>
-          <div class="corner-card c-green">
-            <span class="corner-emoji">🌿</span>
-            <span class="corner-name">العلوم الطبيعية والحياة</span>
-          </div>
-          <div class="corner-card c-teal">
-            <span class="corner-emoji">🏠</span>
-            <span class="corner-name">الحياة الجامعية</span>
-          </div>
-          <div class="corner-card c-pink">
-            <span class="corner-emoji">📝</span>
-            <span class="corner-name">التسجيل والمنحة والإيواء</span>
-          </div>
-          <div class="corner-card c-brown">
-            <span class="corner-emoji">💼</span>
-            <span class="corner-name">ماذا بعد التخرج؟</span>
-          </div>
+
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- 3. CONTACTS -->
-  <div class="card" data-card>
-    <div class="card-header" onclick="toggle(this)">
-      <div class="card-icon icon-mint">📞</div>
-      <div class="card-title">أرقام المنظمين</div>
-      <div class="card-chevron">▼</div>
-    </div>
-    <div class="card-body">
-      <div class="card-inner">
-        <div class="contact-list">
-          <div class="contact-item">
-            <div class="contact-avatar">👤</div>
-            <div>
-              <div class="contact-name">رئيس المكتب الولائي</div>
-              <div class="contact-role">المنسق العام للفعالية</div>
-              <a class="contact-number" href="tel:+213xxxxxxxxx">📱 0XX XX XX XX</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-avatar">👤</div>
-            <div>
-              <div class="contact-name">منسق اليوم الثاني</div>
-              <div class="contact-role">مسؤول Village d'Orientation</div>
-              <a class="contact-number" href="tel:+213xxxxxxxxx">📱 0XX XX XX XX</a>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-avatar">👤</div>
-            <div>
-              <div class="contact-name">مسؤول التسجيل والاستقبال</div>
-              <div class="contact-role">متاح طوال أيام الفعالية</div>
-              <a class="contact-number" href="tel:+213xxxxxxxxx">📱 0XX XX XX XX</a>
-            </div>
-          </div>
-        </div>
-        <p style="font-size:11px;color:var(--muted);margin-top:12px;text-align:center">
-          ⚠️ في حالة الطوارئ أو الاستفسار — نحن هنا لمساعدتك
-        </p>
+    <!-- 2. MAP -->
+    <div class="card" data-card>
+      <div class="card-header" onclick="toggle(this)">
+        <div class="card-icon icon-gold">🗺️</div>
+        <div class="card-title">خريطة الأركان</div>
+        <div class="card-chevron">▼</div>
       </div>
-    </div>
-  </div>
-
-  <!-- 4. LINKS -->
-  <div class="card" data-card>
-    <div class="card-header" onclick="toggle(this)">
-      <div class="card-icon icon-navy">🔗</div>
-      <div class="card-title">روابط التسجيل الجامعي</div>
-      <div class="card-chevron">▼</div>
-    </div>
-    <div class="card-body">
-      <div class="card-inner">
-        <div class="links-list">
-          <a class="link-item" href="https://www.progres.mesrs.dz" target="_blank">
-            <div class="link-icon" style="background:#e3f2fd">🎓</div>
-            <div>
-              <div class="link-text-main">بوابة التسجيل الجامعي</div>
-              <div class="link-text-sub">progres.mesrs.dz</div>
+      <div class="card-body">
+        <div class="card-inner">
+          <p style="font-size:13px;color:var(--muted);margin-bottom:12px">اليوم الثاني — تنقّل بحرية بين الأركان</p>
+          <div class="corners-grid">
+            <div class="corner-card c-red">
+              <span class="corner-emoji">🩺</span>
+              <span class="corner-name">العلوم الطبية</span>
             </div>
-            <div class="link-arrow">←</div>
-          </a>
-          <a class="link-item" href="https://www.mesrs.dz" target="_blank">
-            <div class="link-icon" style="background:#e8f5e9">🏛️</div>
-            <div>
-              <div class="link-text-main">وزارة التعليم العالي</div>
-              <div class="link-text-sub">mesrs.dz</div>
+            <div class="corner-card c-blue">
+              <span class="corner-emoji">⚙️</span>
+              <span class="corner-name">الهندسة والتكنولوجيا</span>
             </div>
-            <div class="link-arrow">←</div>
-          </a>
-          <a class="link-item" href="#" target="_blank">
-            <div class="link-icon" style="background:#fff3e0">📋</div>
-            <div>
-              <div class="link-text-main">دليل التخصصات الجامعية</div>
-              <div class="link-text-sub">تحميل مباشر — PDF</div>
+            <div class="corner-card c-yellow">
+              <span class="corner-emoji">📊</span>
+              <span class="corner-name">العلوم الاقتصادية</span>
             </div>
-            <div class="link-arrow">←</div>
-          </a>
-          <a class="link-item" href="#" target="_blank">
-            <div class="link-icon" style="background:#f3e5f5">💰</div>
-            <div>
-              <div class="link-text-main">ملف المنحة الجامعية</div>
-              <div class="link-text-sub">الشروط والوثائق المطلوبة</div>
+            <div class="corner-card c-purple">
+              <span class="corner-emoji">⚖️</span>
+              <span class="corner-name">الحقوق والعلوم السياسية</span>
             </div>
-            <div class="link-arrow">←</div>
-          </a>
-          <a class="link-item" href="#" target="_blank">
-            <div class="link-icon" style="background:#e0f7fa">🏠</div>
-            <div>
-              <div class="link-text-main">الإيواء الجامعي</div>
-              <div class="link-text-sub">الإجراءات والتسجيل في الإقامة</div>
+            <div class="corner-card c-orange">
+              <span class="corner-emoji">📚</span>
+              <span class="corner-name">الآداب واللغات</span>
             </div>
-            <div class="link-arrow">←</div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 5. DIGITAL FEATURES (bonus) -->
-  <div class="card" data-card>
-    <div class="card-header" onclick="toggle(this)">
-      <div class="card-icon icon-red">💡</div>
-      <div class="card-title">مميزات الفعالية الرقمية</div>
-      <div class="card-chevron">▼</div>
-    </div>
-    <div class="card-body">
-      <div class="card-inner">
-        <div class="digital-grid">
-          <div class="digital-item">
-            <div class="di-icon">📱</div>
-            <div class="di-label">بطاقة مشارك إلكترونية بـ QR</div>
-          </div>
-          <div class="digital-item">
-            <div class="di-icon">🤖</div>
-            <div class="di-label">ركن الذكاء الاصطناعي التفاعلي</div>
-          </div>
-          <div class="digital-item">
-            <div class="di-icon">📊</div>
-            <div class="di-label">استطلاع مباشر على الشاشة</div>
-          </div>
-          <div class="digital-item">
-            <div class="di-icon">🎬</div>
-            <div class="di-label">فيديوهات 30 ثانية يومية</div>
-          </div>
-          <div class="digital-item">
-            <div class="di-icon">🧩</div>
-            <div class="di-label">جدار الأمنيات التفاعلي</div>
-          </div>
-          <div class="digital-item">
-            <div class="di-icon">🎁</div>
-            <div class="di-label">هدية رقمية عند التسجيل</div>
+            <div class="corner-card c-cyan">
+              <span class="corner-emoji">🏛️</span>
+              <span class="corner-name">المدارس العليا الوطنية</span>
+            </div>
+            <div class="corner-card c-green">
+              <span class="corner-emoji">🌿</span>
+              <span class="corner-name">العلوم الطبيعية والحياة</span>
+            </div>
+            <div class="corner-card c-teal">
+              <span class="corner-emoji">🏠</span>
+              <span class="corner-name">الحياة الجامعية</span>
+            </div>
+            <div class="corner-card c-pink">
+              <span class="corner-emoji">📝</span>
+              <span class="corner-name">التسجيل والمنحة والإيواء</span>
+            </div>
+            <div class="corner-card c-brown">
+              <span class="corner-emoji">💼</span>
+              <span class="corner-name">ماذا بعد التخرج؟</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- 3. CONTACTS -->
+    <div class="card" data-card>
+      <div class="card-header" onclick="toggle(this)">
+        <div class="card-icon icon-mint">📞</div>
+        <div class="card-title">أرقام المنظمين</div>
+        <div class="card-chevron">▼</div>
+      </div>
+      <div class="card-body">
+        <div class="card-inner">
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="contact-avatar">👤</div>
+              <div>
+                <div class="contact-name">رئيس المكتب الولائي</div>
+                <div class="contact-role">المنسق العام للفعالية</div>
+                <a class="contact-number" href="tel:+213xxxxxxxxx">📱 0XX XX XX XX</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-avatar">👤</div>
+              <div>
+                <div class="contact-name">منسق اليوم الثاني</div>
+                <div class="contact-role">مسؤول Village d'Orientation</div>
+                <a class="contact-number" href="tel:+213xxxxxxxxx">📱 0XX XX XX XX</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-avatar">👤</div>
+              <div>
+                <div class="contact-name">مسؤول التسجيل والاستقبال</div>
+                <div class="contact-role">متاح طوال أيام الفعالية</div>
+                <a class="contact-number" href="tel:+213xxxxxxxxx">📱 0XX XX XX XX</a>
+              </div>
+            </div>
+          </div>
+          <p style="font-size:11px;color:var(--muted);margin-top:12px;text-align:center">
+            ⚠️ في حالة الطوارئ أو الاستفسار — نحن هنا لمساعدتك
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. LINKS -->
+    <div class="card" data-card>
+      <div class="card-header" onclick="toggle(this)">
+        <div class="card-icon icon-navy">🔗</div>
+        <div class="card-title">روابط التسجيل الجامعي</div>
+        <div class="card-chevron">▼</div>
+      </div>
+      <div class="card-body">
+        <div class="card-inner">
+          <div class="links-list">
+            <a class="link-item" href="https://www.progres.mesrs.dz" target="_blank">
+              <div class="link-icon" style="background:#e3f2fd">🎓</div>
+              <div>
+                <div class="link-text-main">بوابة التسجيل الجامعي</div>
+                <div class="link-text-sub">progres.mesrs.dz</div>
+              </div>
+              <div class="link-arrow">←</div>
+            </a>
+            <a class="link-item" href="https://www.mesrs.dz" target="_blank">
+              <div class="link-icon" style="background:#e8f5e9">🏛️</div>
+              <div>
+                <div class="link-text-main">وزارة التعليم العالي</div>
+                <div class="link-text-sub">mesrs.dz</div>
+              </div>
+              <div class="link-arrow">←</div>
+            </a>
+            <a class="link-item" href="#" target="_blank">
+              <div class="link-icon" style="background:#fff3e0">📋</div>
+              <div>
+                <div class="link-text-main">دليل التخصصات الجامعية</div>
+                <div class="link-text-sub">تحميل مباشر — PDF</div>
+              </div>
+              <div class="link-arrow">←</div>
+            </a>
+            <a class="link-item" href="#" target="_blank">
+              <div class="link-icon" style="background:#f3e5f5">💰</div>
+              <div>
+                <div class="link-text-main">ملف المنحة الجامعية</div>
+                <div class="link-text-sub">الشروط والوثائق المطلوبة</div>
+              </div>
+              <div class="link-arrow">←</div>
+            </a>
+            <a class="link-item" href="#" target="_blank">
+              <div class="link-icon" style="background:#e0f7fa">🏠</div>
+              <div>
+                <div class="link-text-main">الإيواء الجامعي</div>
+                <div class="link-text-sub">الإجراءات والتسجيل في الإقامة</div>
+              </div>
+              <div class="link-arrow">←</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. DIGITAL FEATURES -->
+    <div class="card" data-card>
+      <div class="card-header" onclick="toggle(this)">
+        <div class="card-icon icon-red">💡</div>
+        <div class="card-title">مميزات الفعالية الرقمية</div>
+        <div class="card-chevron">▼</div>
+      </div>
+      <div class="card-body">
+        <div class="card-inner">
+          <div class="digital-grid">
+            <div class="digital-item">
+              <div class="di-icon">📱</div>
+              <div class="di-label">بطاقة مشارك إلكترونية بـ QR</div>
+            </div>
+            <div class="digital-item">
+              <div class="di-icon">🤖</div>
+              <div class="di-label">ركن الذكاء الاصطناعي التفاعلي</div>
+            </div>
+            <div class="digital-item">
+              <div class="di-icon">📊</div>
+              <div class="di-label">استطلاع مباشر على الشاشة</div>
+            </div>
+            <div class="digital-item">
+              <div class="di-icon">🎬</div>
+              <div class="di-label">فيديوهات 30 ثانية يومية</div>
+            </div>
+            <div class="digital-item">
+              <div class="di-icon">🧩</div>
+              <div class="di-label">جدار الأمنيات التفاعلي</div>
+            </div>
+            <div class="digital-item">
+              <div class="di-icon">🎁</div>
+              <div class="di-label">هدية رقمية عند التسجيل</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. REGISTRATION & ATTENDANCE (NEW) -->
+    <div class="card" data-card id="regCard">
+      <div class="card-header" onclick="toggle(this)">
+        <div class="card-icon icon-orange">📋</div>
+        <div class="card-title">تسجيل الحضور وإحصاء الطلبة</div>
+        <div class="card-chevron">▼</div>
+      </div>
+      <div class="card-body">
+        <div class="card-inner">
+          <!-- form -->
+          <form class="reg-form" id="attendeeForm" onsubmit="return false;">
+            <div class="reg-form-row">
+              <div class="reg-form-group">
+                <label for="firstName">الاسم</label>
+                <input type="text" id="firstName" placeholder="مثال: أحمد" required>
+              </div>
+              <div class="reg-form-group">
+                <label for="lastName">اللقب</label>
+                <input type="text" id="lastName" placeholder="مثال: بن سالم" required>
+              </div>
+            </div>
+            <div class="reg-form-row">
+              <div class="reg-form-group">
+                <label for="phone">رقم الهاتف</label>
+                <input type="tel" id="phone" placeholder="0XX XX XX XX" required>
+              </div>
+              <div class="reg-form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" placeholder="exemple@mail.com">
+              </div>
+            </div>
+            <div class="reg-form-row">
+              <div class="reg-form-group">
+                <label for="specialty">التخصص المهتم به</label>
+                <select id="specialty">
+                  <option value="">-- اختر --</option>
+                  <option value="العلوم الطبية">العلوم الطبية</option>
+                  <option value="الهندسة والتكنولوجيا">الهندسة والتكنولوجيا</option>
+                  <option value="العلوم الاقتصادية">العلوم الاقتصادية</option>
+                  <option value="الحقوق والعلوم السياسية">الحقوق والعلوم السياسية</option>
+                  <option value="الآداب واللغات">الآداب واللغات</option>
+                  <option value="المدارس العليا الوطنية">المدارس العليا الوطنية</option>
+                  <option value="العلوم الطبيعية والحياة">العلوم الطبيعية والحياة</option>
+                  <option value="الحياة الجامعية">الحياة الجامعية</option>
+                  <option value="التسجيل والمنحة والإيواء">التسجيل والمنحة والإيواء</option>
+                  <option value="ماذا بعد التخرج؟">ماذا بعد التخرج؟</option>
+                </select>
+              </div>
+              <div class="reg-form-group">
+                <label for="day">اليوم الحاضر</label>
+                <select id="day">
+                  <option value="اليوم الأول">اليوم الأول (الإلهام)</option>
+                  <option value="اليوم الثاني">اليوم الثاني (Village)</option>
+                  <option value="اليوم الثالث">اليوم الثالث (القرار)</option>
+                </select>
+              </div>
+            </div>
+            <div class="reg-actions">
+              <button type="submit" class="btn btn-primary" id="addBtn">➕ تسجيل الحضور</button>
+              <button type="button" class="btn btn-outline" id="clearAllBtn">🗑️ مسح الكل</button>
+              <button type="button" class="btn btn-success" id="exportBtn">📥 تصدير CSV</button>
+              <div class="reg-stats">
+                👥 <strong id="countDisplay">0</strong> مسجّل
+              </div>
+            </div>
+          </form>
+
+          <!-- table -->
+          <div class="table-wrap">
+            <table class="attendee-table" id="attendeeTable">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>الاسم</th>
+                  <th>اللقب</th>
+                  <th>الهاتف</th>
+                  <th>البريد</th>
+                  <th>التخصص</th>
+                  <th>اليوم</th>
+                  <th style="text-align:center">حذف</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+                <tr><td colspan="8" class="empty-msg">لا يوجد مسجلون حتى الآن</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:11px;color:var(--muted);margin-top:10px;text-align:center">
+            💾 يتم حفظ البيانات تلقائياً في متصفحك (LocalStorage)
+          </p>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-</div>
+  <!-- FOOTER -->
+  <footer>
+    <strong>المنظمة الوطنية للشباب من أجل الجزائر — المكتب التنفيذي الولائي المغير</strong><br>
+    <span style="margin-top:4px;display:block">معًا نختار بذكاء ✦ Ensemble, choisissons avec intelligence</span>
+  </footer>
 
-<!-- FOOTER -->
-<footer>
-  <strong>المنظمة الوطنية للشباب من أجل الجزائر — المكتب التنفيذي الولائي المغير</strong><br>
-  <span style="margin-top:4px;display:block">معًا نختار بذكاء ✦ Ensemble, choisissons avec intelligence</span>
-</footer>
+  <script>
+    // ── Accordion toggle ──
+    function toggle(header) {
+      const card = header.closest('.card');
+      const isOpen = card.classList.contains('open');
+      document.querySelectorAll('.card.open').forEach(c => c.classList.remove('open'));
+      if (!isOpen) card.classList.add('open');
+    }
 
-<script>
-  // Toggle accordion
-  function toggle(header) {
-    const card = header.closest('.card');
-    const isOpen = card.classList.contains('open');
-    // Close all
-    document.querySelectorAll('.card.open').forEach(c => c.classList.remove('open'));
-    // Open this one if it was closed
-    if (!isOpen) card.classList.add('open');
-  }
+    // ── Open first card by default ──
+    document.addEventListener('DOMContentLoaded', () => {
+      const first = document.querySelector('.card');
+      if (first) first.classList.add('open');
 
-  // Open first card by default
-  document.addEventListener('DOMContentLoaded', () => {
-    const first = document.querySelector('.card');
-    if (first) first.classList.add('open');
-  });
+      // init registration
+      loadAttendees();
+    });
 
-  // Scroll reveal animation
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, i * 80);
-        observer.unobserve(entry.target);
+    // ── Scroll reveal ──
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('[data-card]').forEach(card => observer.observe(card));
+
+    // ── REGISTRATION LOGIC ──
+    const STORAGE_KEY = 'attendees_data';
+
+    function getAttendees() {
+      try {
+        const data = localStorage.getItem(STORAGE_KEY);
+        return data ? JSON.parse(data) : [];
+      } catch { return []; }
+    }
+
+    function saveAttendees(list) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+    }
+
+    function renderTable() {
+      const list = getAttendees();
+      const tbody = document.getElementById('tableBody');
+      const countDisplay = document.getElementById('countDisplay');
+
+      countDisplay.textContent = list.length;
+
+      if (list.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="8" class="empty-msg">لا يوجد مسجلون حتى الآن</td></tr>`;
+        return;
+      }
+
+      let html = '';
+      list.forEach((p, idx) => {
+        html += `<tr>
+          <td>${idx + 1}</td>
+          <td>${escapeHtml(p.firstName || '')}</td>
+          <td>${escapeHtml(p.lastName || '')}</td>
+          <td>${escapeHtml(p.phone || '')}</td>
+          <td>${escapeHtml(p.email || '')}</td>
+          <td>${escapeHtml(p.specialty || '')}</td>
+          <td>${escapeHtml(p.day || '')}</td>
+          <td style="text-align:center">
+            <button class="delete-btn" data-index="${idx}" title="حذف">✕</button>
+          </td>
+        </tr>`;
+      });
+      tbody.innerHTML = html;
+
+      // attach delete events
+      tbody.querySelectorAll('.delete-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const idx = parseInt(this.dataset.index);
+          deleteAttendee(idx);
+        });
+      });
+    }
+
+    // simple escape
+    function escapeHtml(text) {
+      if (!text) return '';
+      return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+    }
+
+    function deleteAttendee(index) {
+      const list = getAttendees();
+      if (index >= 0 && index < list.length) {
+        list.splice(index, 1);
+        saveAttendees(list);
+        renderTable();
+      }
+    }
+
+    function clearAll() {
+      if (confirm('هل أنت متأكد من حذف جميع المسجلين؟')) {
+        saveAttendees([]);
+        renderTable();
+      }
+    }
+
+    function addAttendee() {
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const specialty = document.getElementById('specialty').value;
+      const day = document.getElementById('day').value;
+
+      if (!firstName || !lastName || !phone) {
+        alert('يرجى ملء الاسم واللقب ورقم الهاتف');
+        return false;
+      }
+
+      // simple phone check (optional)
+      if (phone.length < 6) {
+        alert('يرجى إدخال رقم هاتف صحيح');
+        return false;
+      }
+
+      const list = getAttendees();
+      list.push({
+        firstName,
+        lastName,
+        phone,
+        email,
+        specialty,
+        day
+      });
+      saveAttendees(list);
+      renderTable();
+
+      // clear form
+      document.getElementById('firstName').value = '';
+      document.getElementById('lastName').value = '';
+      document.getElementById('phone').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('specialty').value = '';
+      // day stays as default
+
+      return true;
+    }
+
+    function loadAttendees() {
+      renderTable();
+    }
+
+    // ── Export CSV ──
+    function exportCSV() {
+      const list = getAttendees();
+      if (list.length === 0) {
+        alert('لا يوجد بيانات لتصديرها');
+        return;
+      }
+      // headers
+      const headers = ['الاسم', 'اللقب', 'الهاتف', 'البريد', 'التخصص', 'اليوم'];
+      const rows = list.map(p => [
+        p.firstName || '',
+        p.lastName || '',
+        p.phone || '',
+        p.email || '',
+        p.specialty || '',
+        p.day || ''
+      ]);
+
+      let csv = headers.join(',') + '\n';
+      rows.forEach(row => {
+        csv += row.map(cell => `"${cell.replace(/"/g, '""')}"`).join(',') + '\n';
+      });
+
+      const blob = new Blob(['\uFEFF' + csv], { type: 'text/csv;charset=utf-8;' }); // BOM for Arabic
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = `الحضور_${new Date().toISOString().slice(0,10)}.csv`;
+      link.click();
+      URL.revokeObjectURL(link.href);
+    }
+
+    // ── Event listeners ──
+    document.getElementById('addBtn').addEventListener('click', addAttendee);
+    document.getElementById('clearAllBtn').addEventListener('click', clearAll);
+    document.getElementById('exportBtn').addEventListener('click', exportCSV);
+
+    // also allow Enter key on form
+    document.getElementById('attendeeForm').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        addAttendee();
       }
     });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('[data-card]').forEach(card => observer.observe(card));
-</script>
+  </script>
 </body>
 </html>
